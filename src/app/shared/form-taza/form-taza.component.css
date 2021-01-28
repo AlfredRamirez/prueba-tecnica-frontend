@@ -1,0 +1,19 @@
+.container-form-taza {
+  margin: 15px;
+  margin-left: 40%;
+}
+
+.btn-add-taza {
+  float: right;
+  margin-top: 5px;
+}
+
+.btn-add-new-taza {
+   margin-top: 5px;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

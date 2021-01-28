@@ -1,0 +1,12 @@
+.container-ingresos {
+  margin: 15px;
+}
+
+table {
+  width: 100%;
+}
+
+.btn-add-taza {
+   float: right;
+   margin: 5px;
+}

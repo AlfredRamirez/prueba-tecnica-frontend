@@ -1,0 +1,86 @@
+<div class="container-form-taza">
+
+   <div class="container-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Calidad Taza</mat-label>
+         <mat-select (selectionChange)="onChangeCalidadTaza($event)">
+            <mat-option *ngFor="let calidadTazaItem of calidadTaza" [value]="calidadTazaItem.id">
+               {{calidadTazaItem.calidad}}
+            </mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Color Taza</mat-label>
+         <mat-select (selectionChange)="onChangeColorTaza($event)">
+            <mat-option *ngFor="let colorTazaItem of colorTaza" [value]="colorTazaItem.id">
+               {{colorTazaItem.colorTxt}}
+            </mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Dimension Taza</mat-label>
+         <mat-select (selectionChange)="onChangeDimensionTaza($event)">
+            <mat-option *ngFor="let dimensionTazaItem of dimensionTaza" [value]="dimensionTazaItem.id">
+               Alto: {{dimensionTazaItem.alto}}, Ancho: {{dimensionTazaItem.ancho}}, Alto Agarre:
+               {{dimensionTazaItem.altoAgarre}}
+            </mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Capacidad Taza</mat-label>
+         <mat-select (selectionChange)="onChangeCapacidadTaza($event)">
+            <mat-option *ngFor="let capacidadTazaItem of capacidadTaza" [value]="capacidadTazaItem.id">
+               {{capacidadTazaItem.capacidad}} ml.
+            </mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Material Taza</mat-label>
+         <mat-select (selectionChange)="onChangeMaterialTaza($event)">
+            <mat-option *ngFor="let materialTazaItem of materialTaza" [value]="materialTazaItem.id">
+               {{materialTazaItem.material}}
+            </mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Modelo</mat-label>
+         <input matInput [(ngModel)]='modelo' placeholder="" value="">
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Precio Venta</mat-label>
+         <input matInput [(ngModel)]='precioVenta' placeholder="" value="">
+      </mat-form-field>
+   </div>
+
+   <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Stock</mat-label>
+         <input matInput [(ngModel)]='stock' placeholder="" value="">
+      </mat-form-field>
+   </div>
+
+   <div>
+      <button mat-raised-button color="primary" class="btn-add-new-taza" (click)="onClickAddNewRegister()">Guardar</button>
+      <button mat-stroked-button color="primary" class="btn-add-taza" (click)="onClickAddNew()">Regresar</button>
+   </div>
+
+
+</div>

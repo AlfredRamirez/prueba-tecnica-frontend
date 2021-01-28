@@ -1,0 +1,168 @@
+<div class="container-ingresos">
+   <mat-tab-group>
+      <mat-tab label="Calidad Taza">
+         <div class="div-form-container-tab">
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Tipo de Calidad</mat-label>
+               <input matInput [(ngModel)]="txtCalidadTaza" placeholder="" value="">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="btn-add-new-taza" (click)="onClickSaveCAlidadTaza()">Guardar</button>
+         </div>
+
+         <div class="div-form-container-tab">
+            <table mat-table [dataSource]="dataSourceCalidadTaza" class="mat-elevation-z8">
+
+               <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Identificador </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+               </ng-container>
+         
+               <ng-container matColumnDef="calidad">
+                  <th mat-header-cell *matHeaderCellDef> Calidad </th>
+                  <td mat-cell *matCellDef="let element"> {{element.calidad}} </td>
+               </ng-container>
+         
+               <tr mat-header-row *matHeaderRowDef="displayedColumnsCalidadTaza"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumnsCalidadTaza;"></tr>
+            </table>
+         </div>
+      </mat-tab>
+
+      <mat-tab label="Color Taza">
+         <div class="div-form-container-tab">
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Color Taza</mat-label>
+               <input matInput [(ngModel)]="txtColorTaza" placeholder="" value="">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="btn-add-new-taza" (click)="onClickSaveColorTaza()">Guardar</button>
+         </div>
+
+         <div class="div-form-container-tab">
+            <table mat-table [dataSource]="dataSourceColorTaza" class="mat-elevation-z8">
+
+               <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Identificador </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+               </ng-container>
+         
+               <ng-container matColumnDef="color">
+                  <th mat-header-cell *matHeaderCellDef> Color </th>
+                  <td mat-cell *matCellDef="let element"> {{element.colorTxt}} </td>
+               </ng-container>
+         
+               <tr mat-header-row *matHeaderRowDef="displayedColumnsColorTaza"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumnsColorTaza;"></tr>
+            </table>
+         </div>
+      </mat-tab>
+
+      <mat-tab label="Dimension Taza">
+         <div class="div-form-container-tab">
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Alto</mat-label>
+               <input matInput [(ngModel)]="txtDimensionTaza" placeholder="" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Ancho</mat-label>
+               <input matInput [(ngModel)]="txtDimensionTazaAncho" placeholder="" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Alto Agarradera</mat-label>
+               <input matInput [(ngModel)]="txtDimensionTazaAltoAgarre" placeholder="" value="">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="btn-add-new-taza" (click)="onClickSaveDimensionTaza()">Guardar</button>
+         </div>
+
+         <div class="div-form-container-tab">
+            <table mat-table [dataSource]="dataSourceDimensionTaza" class="mat-elevation-z8">
+
+               <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Identificador </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+               </ng-container>
+         
+               <ng-container matColumnDef="alto">
+                  <th mat-header-cell *matHeaderCellDef> Alto </th>
+                  <td mat-cell *matCellDef="let element"> {{element.alto}} cm. </td>
+               </ng-container>
+
+               <ng-container matColumnDef="ancho">
+                  <th mat-header-cell *matHeaderCellDef> Ancho </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ancho}} cm. </td>
+               </ng-container>
+
+               <ng-container matColumnDef="altoAgarre">
+                  <th mat-header-cell *matHeaderCellDef> Alto Agarradera </th>
+                  <td mat-cell *matCellDef="let element"> {{element.altoAgarre}} cm. </td>
+               </ng-container>
+         
+               <tr mat-header-row *matHeaderRowDef="displayedColumnsDimensionTaza"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumnsDimensionTaza;"></tr>
+            </table>
+         </div>
+      </mat-tab>
+
+      <mat-tab label="Capacidad Taza">
+         <div class="div-form-container-tab">
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Capacidad Taza</mat-label>
+               <input matInput [(ngModel)]="txtCapacidadTaza" placeholder="" value="">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="btn-add-new-taza" (click)="onClickSaveCapacidadTaza()">Guardar</button>
+         </div>
+
+         <div class="div-form-container-tab">
+            <table mat-table [dataSource]="dataSourceCapacidadTaza" class="mat-elevation-z8">
+
+               <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Identificador </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+               </ng-container>
+         
+               <ng-container matColumnDef="capacidad">
+                  <th mat-header-cell *matHeaderCellDef> Capacidad </th>
+                  <td mat-cell *matCellDef="let element"> {{element.capacidad}} ml </td>
+               </ng-container>
+         
+               <tr mat-header-row *matHeaderRowDef="displayedColumnsCapacidadTaza"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumnsCapacidadTaza;"></tr>
+            </table>
+         </div>
+      </mat-tab>
+
+      <mat-tab label="Material Taza">
+         <div class="div-form-container-tab">
+            <mat-form-field class="example-full-width" appearance="fill">
+               <mat-label>Material Taza</mat-label>
+               <input matInput [(ngModel)]="txtMAterialTaza" placeholder="" value="">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="btn-add-new-taza" (click)="onClickSaveMaterialTaza()">Guardar</button>
+         </div>
+
+         <div class="div-form-container-tab">
+            <table mat-table [dataSource]="dataSourceMaterialTaza" class="mat-elevation-z8">
+
+               <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Identificador </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+               </ng-container>
+         
+               <ng-container matColumnDef="material">
+                  <th mat-header-cell *matHeaderCellDef> Material </th>
+                  <td mat-cell *matCellDef="let element"> {{element.material}} </td>
+               </ng-container>
+         
+               <tr mat-header-row *matHeaderRowDef="displayedColumnsMaterialTaza"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumnsMaterialTaza;"></tr>
+            </table>
+         </div>
+      </mat-tab>
+   </mat-tab-group>
+</div>
